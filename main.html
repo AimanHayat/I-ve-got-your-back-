@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cozy Garden — Click to release butterflies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro">
+  <style>
+    /* @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro); */
+    /* Cursor */
+    :root{
+      --duration: 10s;
+      --size: 80vw;
+      --characters: 14;
+      --font-size: 18px;
+      --delay-character: 0.2s;
+      --text-color-hover: #ff8489;
+    }
+    
+    body {
+      font-family: 'Quicksand', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* overflow: hidden; */
+      background: url(https://img.freepik.com/vector-gratis/fondo-abstracto-blanco_23-2148806276.jpg?size=626&ext=jpg) no-repeat center;
+      background-size: cover;
+    }
+  
+    @keyframes frameMove {
+      0% {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+      }
+      24% {
+        top: 0;
+        left: 100%;
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(90deg);
+      }
+      49% {
+        top: 100%;
+        left: 100%;
+        transform: rotate(90deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      74% {
+        top: 100%;
+        left: 0%;
+        transform: rotate(180deg);
+      }
+      75% {
+        transform: rotate(270deg);
+      }
+      99% {
+        top: 0%;
+        left: 0%;
+        transform: rotate(270deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* .stage:hover {
+      box-shadow: inset 0 0 0 0 white, 0 12px 40px rgba(23,41,30,0.28);
+      border: 2px #f9f9f9 solid;
+      cursor: pointer;
+    } */
+
+    .stage:hover .text {
+      mix-blend-mode: difference;
+    }
+
+    .stage:hover .text span {
+      color: var(--text-color-hover);
+    }
+
+    .text {
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: translate(
+          calc(calc(var(--font-size) * -1) / 2),
+          calc(calc(var(--font-size) * -1) / 2)
+        );
+      transition: ease all 0.3s;
+    }
+
+    .text span {
+      font-size: var(--font-size);
+      display: inline-block;
+      text-align: center;
+      width: var(--font-size);
+      animation: frameMove var(--duration) linear infinite;
+      position: absolute;
+      transition: ease all 0.3s;
+    }
+    .text span:nth-of-type(1) {
+      animation-delay: calc(var(--delay-character) * 1);
+    }
+    .text span:nth-of-type(2) {
+      animation-delay: calc(var(--delay-character) * 2);
+    }
+    .text span:nth-of-type(3) {
+      animation-delay: calc(var(--delay-character) * 3);
+    }
+    .text span:nth-of-type(4) {
+      animation-delay: calc(var(--delay-character) * 4);
+    }
+    .text span:nth-of-type(5) {
+      animation-delay: calc(var(--delay-character) * 5);
+    }
+    .text span:nth-of-type(6) {
+      animation-delay: calc(var(--delay-character) * 6);
+    }
+    .text span:nth-of-type(7) {
+      animation-delay: calc(var(--delay-character) * 7);
+    }
+    .text span:nth-of-type(8) {
+      animation-delay: calc(var(--delay-character) * 8);
+    }
+    .text span:nth-of-type(9) {
+      animation-delay: calc(var(--delay-character) * 9);
+    }
+    .text span:nth-of-type(10) {
+      animation-delay: calc(var(--delay-character) * 10);
+    }
+    .text span:nth-of-type(11) {
+      animation-delay: calc(var(--delay-character) * 11);
+    }
+    .text span:nth-of-type(12) {
+      animation-delay: calc(var(--delay-character) * 12);
+    }
+    .text span:nth-of-type(13) {
+      animation-delay: calc(var(--delay-character) * 13);
+    }
+    .text span:nth-of-type(14) {
+      animation-delay: calc(var(--delay-character) * 14);
+    }
+    .text span:nth-of-type(15) {
+      animation-delay: calc(var(--delay-character) * 15);
+    }
+    .text span:nth-of-type(16) {
+      animation-delay: calc(var(--delay-character) * 16);
+    }
+    .text span:nth-of-type(17) {
+      animation-delay: calc(var(--delay-character) * 17);
+    }
+    .text span:nth-of-type(18) {
+      animation-delay: calc(var(--delay-character) * 18);
+    }
+    .text span:nth-of-type(19) {
+      animation-delay: calc(var(--delay-character) * 19);
+    }
+    .text span:nth-of-type(20) {
+      animation-delay: calc(var(--delay-character) * 20);
+    }
+    .text span:nth-of-type(21) {
+      animation-delay: calc(var(--delay-character) * 21);
+    }
+    .text span:nth-of-type(22) {
+      animation-delay: calc(var(--delay-character) * 22);
+    }
+    .text span:nth-of-type(23) {
+      animation-delay: calc(var(--delay-character) * 23);
+    }
+    .text span:nth-of-type(24) {
+      animation-delay: calc(var(--delay-character) * 24);
+    }
+    .text span:nth-of-type(25) {
+      animation-delay: calc(var(--delay-character) * 25);
+    }
+    .text span:nth-of-type(26) {
+      animation-delay: calc(var(--delay-character) * 26);
+    }
+    .text span:nth-of-type(27) {
+      animation-delay: calc(var(--delay-character) * 27);
+    }
+    .text span:nth-of-type(28) {
+      animation-delay: calc(var(--delay-character) * 28);
+    }
+    .text span:nth-of-type(29) {
+      animation-delay: calc(var(--delay-character) * 29);
+    }
+    .text span:nth-of-type(30) {
+      animation-delay: calc(var(--delay-character) * 30);
+    }
+    .text span:nth-of-type(31) {
+      animation-delay: calc(var(--delay-character) * 31);
+    }
+    .text span:nth-of-type(32) {
+      animation-delay: calc(var(--delay-character) * 32);
+    }
+    .text span:nth-of-type(33) {
+      animation-delay: calc(var(--delay-character) * 33);
+    }
+    .text span:nth-of-type(34) {
+      animation-delay: calc(var(--delay-character) * 34);
+    }
+    .text span:nth-of-type(35) {
+      animation-delay: calc(var(--delay-character) * 35);
+    }
+    .text span:nth-of-type(36) {
+      animation-delay: calc(var(--delay-character) * 36);
+    }
+    .text span:nth-of-type(37) {
+      animation-delay: calc(var(--delay-character) * 37);
+    }
+    .text span:nth-of-type(38) {
+      animation-delay: calc(var(--delay-character) * 38);
+    }
+    .text span:nth-of-type(39) {
+      animation-delay: calc(var(--delay-character) * 39);
+    }
+    .text span:nth-of-type(40) {
+      animation-delay: calc(var(--delay-character) * 40);
+    }
+    .text span:nth-of-type(41) {
+      animation-delay: calc(var(--delay-character) * 41);
+    }
+    .text span:nth-of-type(42) {
+      animation-delay: calc(var(--delay-character) * 42);
+    }
+    .text span:nth-of-type(43) {
+      animation-delay: calc(var(--delay-character) * 43);
+    }
+    .text span:nth-of-type(44) {
+      animation-delay: calc(var(--delay-character) * 44);
+    }
+    .text span:nth-of-type(45) {
+      animation-delay: calc(var(--delay-character) * 45);
+    }
+    .text span:nth-of-type(46) {
+      animation-delay: calc(var(--delay-character) * 46);
+    }
+    .text span:nth-of-type(47) {
+      animation-delay: calc(var(--delay-character) * 47);
+    }
+    .text span:nth-of-type(48) {
+      animation-delay: calc(var(--delay-character) * 48);
+    }
+    .text span:nth-of-type(49) {
+      animation-delay: calc(var(--delay-character) * 49);
+    }
+    .text span:nth-of-type(50) {
+      animation-delay: calc(var(--delay-character) * 50);
+    }
+    .text span:nth-of-type(51) {
+      animation-delay: calc(var(--delay-character) * 51);
+    }
+    .text span:nth-of-type(52) {
+      animation-delay: calc(var(--delay-character) * 52);
+    }
+
+    /* full screen garden stage */
+    .stage {
+      margin-top: 50px;
+      position: relative;
+      width: min(1150px, 96vw);
+      height: min(720px, 86vh);
+      border-radius: 18px;
+      /* overflow: hidden; */
+      /* border: 2px #fbfbfb solid; */
+      box-shadow: inset 0 0 0 20px white, 0 12px 40px rgba(23,41,30,0.28);
+      background-image: url('Garden3.png');
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      transition: ease all 0.3s;
+      
+      
+    }
+    .left {
+      color: #08261a;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    }
+    h1 {
+      font-size: clamp(18px, 3.5vw, 34px);
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      font-size: clamp(12px, 1.6vw, 16px);
+      opacity: 0.92;
+    }
+
+    /* butterflies container sits on top of stage */
+    .butterflies {
+      position: absolute; inset: 0; z-index: 6; pointer-events: none; overflow: visible;
+    }
+
+    /* each butterfly is an inline svg with animated wings */
+    .butterfly {
+      position: absolute;
+      width: 56px; height: 44px;
+      transform-origin: center center;
+      will-change: transform;
+      pointer-events: auto; /* allow click to remove or interact */
+      filter: drop-shadow(0 6px 12px rgba(40,20,60,0.12));
+    }
+    .cursor{
+      position: relative;
+      width: 24em;
+      /* margin: 0 auto; */
+      border-right: 2px solid rgba(255,255,255,.75);
+      font-size: 20px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);    
+    }
+    /* Animation */
+    .typewriter-animation {
+      animation: 
+        typewriter 5s steps(50) 1s 1 normal both, 
+        blinkingCursor 500ms steps(50) infinite normal;
+    }
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blinkingCursor{
+      from { border-right-color: rgba(255,255,255,.75); }
+      to { border-right-color: transparent; }
+    }
+    
+    /* wing flap animation (applies to wing groups inside svg) */
+    @keyframes flap {
+      0% { transform: rotateZ(0deg); }
+      50% { transform: rotateZ(18deg); }
+      100% { transform: rotateZ(0deg); }
+    }
+
+    .wing {
+      transform-origin: 15px 22px;
+      animation: flap 360ms ease-in-out infinite;
+    }
+
+    .wing.right { transform-origin: 40px 22px; }
+
+    /* tiny sparkle when created */
+    .sparkle {
+      position: absolute; width: 14px; height: 14px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(255,255,255,0.6) 35%, rgba(255,255,255,0.0) 70%);
+      z-index: 7; pointer-events: none; opacity: 0.9;
+      transform: translate(-50%,-50%) scale(0.6);
+      animation: sparklePop 420ms ease-out forwards;
+    }
+    @keyframes sparklePop {
+      to { opacity: 0; transform: translate(-50%,-50%) scale(1.6); }
+    }
+
+    /* responsive tweaks */
+    @media (max-width: 720px) {
+      .stage { height: 78vh; border-radius: 12px; }
+      .butterfly { width: 44px; height: 34px; }
+      .content { padding: 14px; }
+    }
+
+    /* footer attribution */
+    .credit {
+      position: absolute; left: 10px; top: 8px; z-index: 8; font-size: 13px; color: rgba(8,26,19,0.8);
+      background: rgba(255,255,255,0.6); padding:6px 10px; border-radius: 10px; pointer-events:none;
+    }
+    </style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="text">
+      <span>❤</span>
+      <span></span>
+      <span>E</span>
+      <span>V</span>
+      <span>O</span>
+      <span>L</span>
+      <span></span>
+      <span>H</span>
+      <span>T</span>
+      <span>I</span>
+      <span>W</span>
+      <span></span>
+      <span>E</span>
+      <span>D</span>
+      <span>A</span>
+      <span>M</span>
+      <span></span>
+      <span>❤</span>
+      <span></span>
+      <span>E</span>
+      <span>V</span>
+      <span>O</span>
+      <span>L</span>
+      <span></span>
+      <span>H</span>
+      <span>T</span>
+      <span>I</span>
+      <span>W</span>
+      <span></span>
+      <span>E</span>
+      <span>D</span>
+      <span>A</span>
+      <span>M</span>
+      <span></span>
+      <span>❤</span>
+      <span></span>
+      <span>E</span>
+      <span>V</span>
+      <span>O</span>
+      <span>L</span>
+      <span></span>
+      <span>H</span>
+      <span>T</span>
+      <span>I</span>
+      <span>W</span>
+      <span></span>
+      <span>E</span>
+      <span>D</span>
+      <span>A</span>
+      <span>M</span>
+    </div>
+    <div style="align-items: center; margin-bottom: 200px; padding: 5em; color: #f1f1f1; font-weight: bold;">
+      <p class="cursor typewriter-animation">Hi there, <br> I know life's been tough but <br> you're doing so great and I'm so <br>proud of you for that <br>don't ever give up. I've got your back!</ps>
+    </div>
+    <div class="butterflies" id="butterflies"></div>
+  </div>
+
+  <script>
+    // Utilities
+    const stage = document.getElementById('stage');
+    const container = document.getElementById('butterflies');
+
+    // Keep track so we can update motion per frame
+    const flyers = new Set();
+
+    // Create a butterfly SVG node. Accepts color options for variety.
+    function createButterflyElement(color1 = '#FF9AA2', color2 = '#FFD6A5') {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'butterfly';
+
+    // Inline SVG for crisp wings
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 56 44');
+    svg.setAttribute('width', '56');
+    svg.setAttribute('height', '44');
+
+    // left wing
+    const left = document.createElementNS(ns, 'path');
+    left.setAttribute('class', 'wing left');
+    left.setAttribute('d', 'M22 22 C4 10, 6 2, 18 10 C28 16, 26 30, 22 22Z');
+    left.setAttribute('fill', color1);
+    left.setAttribute('opacity', '0.95');
+
+    // right wing
+    const right = document.createElementNS(ns, 'path');
+    right.setAttribute('class', 'wing right');
+    right.setAttribute('d', 'M34 22 C52 10, 50 2, 38 10 C28 16, 30 30, 34 22Z');
+    right.setAttribute('fill', color2);
+    right.setAttribute('opacity', '0.95');
+
+    // body
+    const body = document.createElementNS(ns, 'ellipse');
+    body.setAttribute('cx', '28');
+    body.setAttribute('cy', '22');
+    body.setAttribute('rx', '3');
+    body.setAttribute('ry', '7');
+    body.setAttribute('fill', '#3c2b3b');
+    body.setAttribute('opacity', '0.9');
+
+    // antennae
+    const a1 = document.createElementNS(ns,'path'); a1.setAttribute('d','M26 10 C22 6, 18 4, 16 6'); a1.setAttribute('stroke','#3c2b3b'); a1.setAttribute('fill','none'); a1.setAttribute('stroke-width','1');
+    const a2 = document.createElementNS(ns,'path'); a2.setAttribute('d','M30 10 C34 6, 38 4, 40 6'); a2.setAttribute('stroke','#3c2b3b'); a2.setAttribute('fill','none'); a2.setAttribute('stroke-width','1');
+
+    svg.appendChild(left);
+    svg.appendChild(right);
+    svg.appendChild(body);
+    svg.appendChild(a1);
+    svg.appendChild(a2);
+
+    wrapper.appendChild(svg);
+    return wrapper;
+    }
+
+    // Picks a pleasant color pair
+    function randomPalette() {
+    const palettes = [
+    ['#FFB3BA','#FFDFBA'],
+    ['#FF9AA2','#FFD6A5'],
+    ['#B5EAD7','#C7CEEA'],
+    ['#FBE7C6','#FFE3E3'],
+    ['#C6E2FF','#EAD7FF']
+    ];
+    return palettes[Math.floor(Math.random()*palettes.length)];
+    }
+
+    // Generate a cubic bezier path from start to end with random control points
+    function bezierAt(t, p0, p1, p2, p3) {
+    const cX = 3*(p1.x - p0.x);
+    const bX = 3*(p2.x - p1.x) - cX;
+    const aX = p3.x - p0.x - cX - bX;
+    const cY = 3*(p1.y - p0.y);
+    const bY = 3*(p2.y - p1.y) - cY;
+    const aY = p3.y - p0.y - cY - bY;
+    const x = (aX*(t*t*t)) + (bX*(t*t)) + (cX*t) + p0.x;
+    const y = (aY*(t*t*t)) + (bY*(t*t)) + (cY*t) + p0.y;
+    return {x,y};
+    }
+
+    // Compute derivative to get angle
+    function bezierDeriv(t, p0, p1, p2, p3) {
+    const x = 3*(p1.x - p0.x)*(1-t)*(1-t) + 6*(p2.x - p1.x)*(1-t)*t + 3*(p3.x - p2.x)*(t*t);
+    const y = 3*(p1.y - p0.y)*(1-t)*(1-t) + 6*(p2.y - p1.y)*(1-t)*t + 3*(p3.y - p2.y)*(t*t);
+    return {x,y};
+    }
+
+    // Create motion object for a newly spawned butterfly
+    function spawnButterfly(clientX, clientY) {
+    // stage bounding for coordinates
+    const rect = stage.getBoundingClientRect();
+    const start = { x: clientX - rect.left, y: clientY - rect.top };
+
+    // choose a random target on one of the edges (top or side) so butterflies drift away
+    const side = Math.random() < 0.5 ? 'right' : 'left';
+    const targetY = Math.max(30, Math.random()* (rect.height - 60));
+    const targetX = side === 'right' ? rect.width + 80 : -80;
+    const end = { x: targetX, y: targetY };
+
+    // control points for a curvy flight
+    const cp1 = { x: start.x + (Math.random()*120 - 40), y: start.y - (Math.random()*100 + 20) };
+    const cp2 = { x: start.x + (side === 'right' ? 120 : -120) + (Math.random()*80 - 40), y: start.y + (Math.random()*120 - 60) };
+
+    const [c1,c2] = randomPalette();
+    const el = createButterflyElement(c1, c2);
+    container.appendChild(el);
+
+    // initial position
+    el.style.left = (start.x - 28) + 'px';
+    el.style.top = (start.y - 22) + 'px';
+
+    // sparkle
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = start.x + 'px';
+    sparkle.style.top = start.y + 'px';
+    container.appendChild(sparkle);
+    setTimeout(()=> sparkle.remove(), 520);
+
+    const duration = 3600 + Math.random()*2400; // 3.6s - 6s typical
+
+    const fly = {
+    el, start, cp1, cp2, end, t: 0, duration, birth: performance.now(), wobble: Math.random()*12 + 8
+    };
+    flyers.add(fly);
+
+    // allow clicking a butterfly to gently send it away faster
+    el.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    // shorten remaining time to make it fly away quickly
+    const now = performance.now();
+    const elapsed = now - fly.birth;
+    fly.t = Math.min(0.96, (elapsed / fly.duration));
+    fly.duration = Math.max(600, fly.duration * 0.2);
+    });
+
+    return fly;
+    }
+
+    // Animation loop
+    function animate(now) {
+    for (const f of Array.from(flyers)) {
+    const elapsed = now - f.birth;
+    let t = Math.min(1, elapsed / f.duration);
+
+    // ease in-out cubic for nicer motion
+    const ease = t<0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+    t = ease;
+
+    const p = bezierAt(t, f.start, f.cp1, f.cp2, f.end);
+    const d = bezierDeriv(t, f.start, f.cp1, f.cp2, f.end);
+    const angle = Math.atan2(d.y, d.x) * 180 / Math.PI;
+
+    // add little vertical wobble so flight isn't perfectly smooth
+    const wobble = Math.sin((now + (f.wobble*100)) / (120 + f.wobble*6)) * (6 + (f.wobble/3));
+
+    f.el.style.transform = `translate(${p.x - 28}px, ${p.y - 22 + wobble}px) rotate(${angle}deg) scale(${0.9 + 0.1*Math.sin(now/250)})`;
+
+    // slowly reduce wing animation speed as it goes away
+    const wings = f.el.querySelectorAll('.wing');
+    wings.forEach(w=>{
+    const speed = 320 - (t*160) + (Math.abs(wobble));
+    w.style.animationDuration = Math.max(180, speed) + 'ms';
+    });
+
+    if (t >= 0.999) {
+    // finished; remove
+    f.el.remove();
+    flyers.delete(f);
+    }
+    }
+    requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+
+    // Spawn on clicks/taps on stage
+    stage.addEventListener('click', (e)=>{
+    // allow multiple butterflies per click for fun if ctrl/shift held
+    const count = e.shiftKey ? 6 : (e.ctrlKey ? 3 : 1);
+    for (let i=0;i<count;i++) {
+    // small random offset so multiple ones don't overlap exactly
+    const rx = e.clientX + (Math.random()*40 - 20);
+    const ry = e.clientY + (Math.random()*40 - 20);
+    spawnButterfly(rx, ry);
+    }
+    });
+
+    // also spawn a few on load for ambience
+    window.addEventListener('load', ()=>{
+    const rect = stage.getBoundingClientRect();
+    for (let i=0;i<5;i++) {
+    const x = rect.left + 40 + Math.random()*(rect.width-80);
+    const y = rect.top + 100 + Math.random()*(rect.height-200);
+    spawnButterfly(x,y);
+    }
+    });
+
+    // accessibility: spacebar toggles a gentle burst at center
+    window.addEventListener('keydown',(e)=>{
+    if (e.code === 'Space') {
+    e.preventDefault();
+    const rect = stage.getBoundingClientRect();
+    for (let i=0;i<5;i++) spawnButterfly(rect.left + rect.width/2 + (Math.random()*120-60), rect.top + rect.height/2 + (Math.random()*90-45));
+    }
+    });
+
+    // Optional: clear butterflies on long-press (press C)
+    window.addEventListener('keydown',(e)=>{
+    if (e.key.toLowerCase() === 'c') {
+    for (const f of flyers) { f.el.remove(); }
+    flyers.clear();
+    }
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
